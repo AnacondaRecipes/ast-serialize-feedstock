@@ -15,6 +15,7 @@ build:
   script:
     - cp "${RECIPE_DIR}/cargo-auditable-wrapper.sh" "${BUILD_PREFIX}/bin/cargo-auditable-wrapper"  # [not win]
     - chmod 755 "${BUILD_PREFIX}/bin/cargo-auditable-wrapper"                                       # [not win]
+    - set CARGO_HOME=c:\.cg  # [win]
     - copy "%RECIPE_DIR%\cargo-auditable-wrapper.bat" "%BUILD_PREFIX%\Library\bin\cargo-auditable-wrapper.bat"  # [win]
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
