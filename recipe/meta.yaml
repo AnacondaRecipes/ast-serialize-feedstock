@@ -1,4 +1,4 @@
-{% set version = "0.6.0" %}
+{% set version = "0.12.1" %}
 {% set name = "ast-serialize" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: aadd3ffcf4858c9726bf3515f7b199c7eadbe504f96028e4a87172c0da65a8fe
+  sha256: 5285a390caf1c44368ae270f037f797b91427d138b7d43cad0f1fda4c83518d9
 
 build:
   number: 0
